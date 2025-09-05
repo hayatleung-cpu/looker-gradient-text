@@ -11,7 +11,7 @@
       "description": "Simple gradient-filled heading",
       "iconUrl": "https://via.placeholder.com/48",
       "resource": {
-        "html": "https://hayatleung-cpu.github.io/looker-gradient-text/index.html"
+        "js": "https://hayatleung-cpu.github.io/looker-gradient-text/viz.js"
       },
       "useSandboxedIframe": true
     }
