@@ -25,6 +25,19 @@
 </head>
 <body>
   <div id="root"><div class="grad" id="title">Total Calls & Appointments Booked</div></div>
-  <script src="viz.js"></script>
+  <script>
+(function () {
+  var dscc = window.dscc || {};
+  function drawViz() {
+    // Nothing dynamic yet; the HTML already renders the gradient heading.
+  }
+  if (dscc.subscribeToData) {
+    dscc.subscribeToData(drawViz, { transform: dscc.tableTransform });
+  } else {
+    drawViz();
+  }
+})();
+</script>
+
 </body>
 </html>
