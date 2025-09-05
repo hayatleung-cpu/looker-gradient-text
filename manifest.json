@@ -1,9 +1,10 @@
 {
   "name": "Gradient Text",
-  "organization": "Your Name or Company",
+  "organization": "Hayat Leung",
   "description": "Header text with an orange gradient.",
   "supportUrl": "https://github.com/hayatleung-cpu/looker-gradient-text",
   "logoUrl": "https://via.placeholder.com/96",
+  "gcsVersion": "v1",
   "components": {
     "gradient_text": {
       "name": "Gradient Text",
@@ -12,8 +13,7 @@
       "resource": {
         "html": "https://hayatleung-cpu.github.io/looker-gradient-text/index.html"
       },
-      "useSandboxedIframe": true,
-      "dataRoles": []
+      "useSandboxedIframe": true
     }
   }
 }
