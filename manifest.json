@@ -1,0 +1,16 @@
+{
+  "name": "Gradient Text",
+  "organization": "Your Name or Company",
+  "description": "Renders a title with a left-to-right orange gradient, suitable for headers.",
+  "supportUrl": "https://github.com/your-username/looker-gradient-text",
+  "logoUrl": "https://via.placeholder.com/96",
+  "gcsVersion": "v1",
+  "components": {
+    "gradient_text": {
+      "name": "Gradient Text",
+      "description": "Simple gradient-filled heading",
+      "script": "viz.js",
+      "useSandboxedIframe": true
+    }
+  }
+}
