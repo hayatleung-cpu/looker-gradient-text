@@ -61,7 +61,7 @@
         }
       }
     }
-    if (!title) title = "Customer Dashboard";
+    if (!title) title = "blank";
 
     const fontSize = Number(pick(styleObj, ["fontSize","value"], 60)) || 60;
     const color1   = pick(styleObj, ["color1","value"], "#ff6600");
