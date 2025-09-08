@@ -4,7 +4,7 @@
   "description": "Header text with an orange gradient.",
   "logoUrl": "https://raw.githubusercontent.com/hayatleung-cpu/looker-gradient-text/main/icon.png",
   "packageUrl": "https://github.com/hayatleung-cpu/looker-gradient-text",
-  "supportUrl": "mailto:hayat.leung@elyos.ai",
+  "supportUrl": "mailto:hayat.leung@elyos.ais",
   "devMode": true,
   "components": [
     {
@@ -13,10 +13,9 @@
       "description": "Simple gradient heading",
       "iconUrl": "https://raw.githubusercontent.com/hayatleung-cpu/looker-gradient-text/main/icon.png",
       "resource": {
-        "js": "gs://hayatelyos-viz/gradient-text/viz.js",
+        "js": "gs://hayatelyos-viz/gradient-text/viz-v3.js",
         "config": "gs://hayatelyos-viz/gradient-text/viz-config.json"
       }
     }
   ]
 }
-
