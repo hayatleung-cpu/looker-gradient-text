@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "id": "data",
+      "label": "Data",
+      "elements": [
+        {
+          "id": "dimension",
+          "label": "Dimension",
+          "type": "DIMENSION",
+          "options": { "min": 0, "max": 0 }
+        },
+        {
+          "id": "metric",
+          "label": "Metric",
+          "type": "METRIC",
+          "options": { "min": 0, "max": 0 }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "text",
+      "label": "Text",
+      "elements": [
+        {
+          "id": "title",
+          "label": "Title",
+          "type": "TEXTINPUT",
+          "defaultValue": "Total Calls & Appointments Booked"
+        },
+        {
+          "id": "fontSize",
+          "label": "Font size",
+          "type": "FONT_SIZE",
+          "defaultValue": 48
+        },
+        {
+          "id": "color1",
+          "label": "Gradient start colour",
+          "type": "COLOR",
+          "defaultValue": "#ff6600"
+        },
+        {
+          "id": "color2",
+          "label": "Gradient end colour",
+          "type": "COLOR",
+          "defaultValue": "#ffaa00"
+        }
+      ]
+    }
+  ]
+}
