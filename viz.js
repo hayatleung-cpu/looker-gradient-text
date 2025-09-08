@@ -1,11 +1,16 @@
 const dscc = window.dscc;
 
-function drawViz() {
+function drawViz(data) {
+  // Try to read custom title & font size from style
+  const style = data && data.style ? data.style : {};
+  const title = style.title && style.title.value ? style.title.value : "Total Calls & Appointments Booked";
+  const fontSize = style.fontSize && style.fontSize.value ? style.fontSize.value + "px" : "48px";
+
   const container = document.createElement("div");
   container.innerHTML = `
     <div style="
       font-family: Inter, Arial, Helvetica, sans-serif;
-      font-size: 48px;
+      font-size: ${fontSize};
       font-weight: 800;
       line-height: 1.1;
       background: linear-gradient(90deg, #ff6600, #ffaa00);
@@ -15,9 +20,10 @@ function drawViz() {
       color: transparent;
       text-align: center;
     ">
-      Total Calls & Appointments Booked
+      ${title}
     </div>
   `;
+
   document.body.innerHTML = "";
   document.body.appendChild(container);
 }
