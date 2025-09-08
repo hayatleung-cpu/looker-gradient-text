@@ -1,20 +1,20 @@
 {
   "name": "Gradient Text",
   "organization": "Hayat Leung",
-  "description": "Header text with a configurable gradient.",
+  "description": "Gradient heading with editable title, size, colours and angle.",
   "logoUrl": "https://raw.githubusercontent.com/hayatleung-cpu/looker-gradient-text/main/icon.png",
   "packageUrl": "https://github.com/hayatleung-cpu/looker-gradient-text",
   "supportUrl": "mailto:jek@cashcompany.co.uk",
   "devMode": true,
   "components": [
     {
-      "id": "gradient_text_v2",
-      "name": "Gradient Text (v2)",
-      "description": "Gradient-filled heading with editable title/size/colours/angle.",
+      "id": "gradient_text_v3",
+      "name": "Gradient Text (v3)",
+      "description": "Dynamic gradient text",
       "iconUrl": "https://raw.githubusercontent.com/hayatleung-cpu/looker-gradient-text/main/icon.png",
       "resource": {
-        "js": "gs://hayatelyos-viz/gradient-text/viz-v3.js",
-        "config": "gs://hayatelyos-viz/gradient-text/viz-config-v2.json"
+        "js": "gs://hayatelyos-viz/gradient-text/viz-v4.js",
+        "config": "gs://hayatelyos-viz/gradient-text/viz-config-v3.json"
       }
     }
   ]
