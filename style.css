@@ -1,6 +1,4 @@
-:root {
-  --pad: 8px;
-}
+:root { --pad: 8px; }
 
 html, body, #root {
   height: 100%;
@@ -21,11 +19,9 @@ html, body, #root {
 h1.gradient {
   margin: 0;
   line-height: 1.1;
-  /* Core gradient text trick */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* Fallback for viewers lacking background-clip support */
   -webkit-text-fill-color: transparent;
   word-break: break-word;
 }
