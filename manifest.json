@@ -1,13 +1,21 @@
 {
-  "name": "Test Viz",
-  "resources": {
-    "js": ["https://storage.googleapis.com/hayatelyos-viz/gradient-text/vis.js"]
-  },
+  "name": "Gradient Text",
+  "organization": "Hayat Leung",
+  "description": "Gradient heading with editable title, size, colours and angle.",
+  "logoUrl": "https://raw.githubusercontent.com/hayatleung-cpu/looker-gradient-text/main/icon.png",
+  "packageUrl": "https://github.com/hayatleung-cpu/looker-gradient-text",
+  "supportUrl": "mailto:jek@cashcompany.co.uk",
+  "devMode": true,
   "components": [
     {
-      "name": "Test Vis",
-      "id": "test_vis",
-      "type": "VISUALIZATION"
+      "id": "gradient_text",
+      "name": "Gradient Text",
+      "description": "Dynamic gradient text",
+      "iconUrl": "https://raw.githubusercontent.com/hayatleung-cpu/looker-gradient-text/main/icon.png",
+      "resource": {
+        "js": "gs://hayatelyos-viz/gradient-text/vis.js",
+        "config": "gs://hayatelyos-viz/gradient-text/viz-config.json"
+      }
     }
   ]
 }
