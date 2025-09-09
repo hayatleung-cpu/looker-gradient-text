@@ -1,59 +1,60 @@
-/* Gradient Text – dynamic controls */
+/* global dscc */
 (function () {
-  const dscc = window.dscc;
+  const root = document.createElement('div');
+  root.id = 'root';
+  document.body.appendChild(root);
 
-  function safe(obj, path, fallback) {
-    try {
-      return path.reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj) ?? fallback;
-    } catch (_) { return fallback; }
+  const wrapper = document.createElement('div');
+  wrapper.className = 'wrapper';
+  root.appendChild(wrapper);
+
+  const heading = document.createElement('h1');
+  heading.className = 'gradient';
+  wrapper.appendChild(heading);
+
+  // Helper to read a style control with a fallback
+  function S(style, key, fallback) {
+    if (!style || !style[key]) return fallback;
+    const v = style[key].value;
+    return (v === undefined || v === null || v === '') ? fallback : v;
   }
 
-  function render({ title, fontSize, color1, color2, angle }) {
-    // Basic reset so our text sits cleanly
-    document.body.style.margin = "0";
-    document.body.style.padding = "0";
-    document.body.style.background = "transparent";
+  function draw(data) {
+    const style = data && data.style ? data.style : {};
 
-    document.body.innerHTML = `
-      <div style="
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        width:100%;
-        height:100%;
-      ">
-        <div style="
-          font-family: Inter, Arial, Helvetica, sans-serif;
-          font-size: ${fontSize}px;
-          font-weight: 800;
-          line-height: 1.1;
-          background: linear-gradient(${angle}deg, ${color1}, ${color2});
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
-          text-align: center;
-          padding: 8px 12px;
-          word-break: break-word;
-        ">${title}</div>
-      </div>
-    `;
+    const text         = S(style, 'textContent', 'Your Gradient Heading');
+    const fontSize     = Number(S(style, 'fontSize', 64));
+    const fontWeight   = String(S(style, 'fontWeight', '700'));
+    const textAlign    = S(style, 'textAlign', 'center');
+    const letterSpacing= Number(S(style, 'letterSpacing', 0));
+    const startColor   = S(style, 'startColor', '#ff7e5f');
+    const endColor     = S(style, 'endColor', '#feb47b');
+    const angle        = Number(S(style, 'angle', 90));
+    const lineHeight   = Number(S(style, 'lineHeight', 1.1));
+    const padding      = Number(S(style, 'padding', 8));
+
+    heading.textContent = text;
+    heading.style.fontSize = fontSize + 'px';
+    heading.style.fontWeight = fontWeight;
+    heading.style.textAlign = textAlign;
+    heading.style.letterSpacing = letterSpacing + 'px';
+    heading.style.lineHeight = String(lineHeight);
+    wrapper.style.setProperty('--pad', padding + 'px');
+
+    // Gradient
+    const gradient = `linear-gradient(${angle}deg, ${startColor}, ${endColor})`;
+    heading.style.backgroundImage = gradient;
+
+    // Layout alignment
+    wrapper.style.justifyItems =
+      textAlign === 'left' ? 'start' :
+      textAlign === 'right' ? 'end' : 'center';
   }
 
-  function draw(message) {
-    const style = safe(message, ["style"], {});
-    const title   = safe(style, ["title", "value"], "Customer Dashboard");
-    const fontSz  = Number(safe(style, ["fontSize", "value"], 60)) || 60;
-    const color1  = safe(style, ["color1", "value"], "#ff6600");
-    const color2  = safe(style, ["color2", "value"], "#ffaa00");
-    const angle   = Number(safe(style, ["angle", "value"], 90)) || 90;
-
-    render({ title, fontSize: fontSz, color1, color2, angle });
-  }
-
-  if (dscc && typeof dscc.subscribeToData === "function") {
-    dscc.subscribeToData(draw, { transform: dscc.tableTransform });
+  if (window.dscc && dscc.subscribeToData) {
+    dscc.subscribeToData(draw, { transform: dscc.objectTransform });
   } else {
-    draw(null); // fallback for local testing
+    // Local fallback preview
+    draw({ style: {} });
   }
 })();
