@@ -1,0 +1,13 @@
+{
+  "name": "Test Viz",
+  "resources": {
+    "js": ["https://storage.googleapis.com/hayatelyos-viz/gradient-text/vis.js"]
+  },
+  "components": [
+    {
+      "name": "Test Vis",
+      "id": "test_vis",
+      "type": "VISUALIZATION"
+    }
+  ]
+}
