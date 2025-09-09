@@ -1,13 +1,6 @@
 {
   "data": [
-    {
-      "id": "optionalData",
-      "label": "Optional data (ignored)",
-      "elements": [
-        { "id": "dimension", "label": "Dimension", "type": "DIMENSION", "options": { "min": 0, "max": 10 } },
-        { "id": "metric", "label": "Metric", "type": "METRIC", "options": { "min": 0, "max": 10 } }
-      ]
-    }
+    { "id": "optional", "label": "Optional data (ignored)", "elements": [] }
   ],
   "style": [
     {
@@ -23,4 +16,3 @@
     }
   ]
 }
-
