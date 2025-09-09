@@ -1,101 +1,13 @@
 {
-  "name": "Gradient Text",
-  "description": "Heading with CSS gradient text",
-  "organization": "Cash Company",
-  "logoUrl": "https://dummyimage.com/120x120/ddd/000.png&text=GT",
-  "supportUrl": "https://example.com",
-  "privacyPolicyUrl": "https://example.com/privacy",
+  "name": "Test Viz",
   "resources": {
-    "js": ["https://storage.googleapis.com/hayatelyos-viz/gradient-text/index.js"],
-    "css": ["https://storage.googleapis.com/hayatelyos-viz/gradient-text/styles.css"]
+    "js": ["https://storage.googleapis.com/hayatelyos-viz/gradient-text/vis.js"]
   },
-  "devMode": true,
   "components": [
     {
-      "name": "Gradient Text",
-      "id": "gradient_text",
-      "type": "VISUALIZATION",
-      "iconUrl": "https://dummyimage.com/48x48/ddd/000.png&text=G",
-      "options": {
-        "style": {
-          "textContent": {
-            "label": "Text",
-            "type": "TEXTINPUT",
-            "defaultValue": "Your Gradient Heading"
-          },
-          "fontSize": {
-            "label": "Font size (px)",
-            "type": "NUMBER",
-            "defaultValue": 64,
-            "min": 8,
-            "max": 200,
-            "step": 1
-          },
-          "fontWeight": {
-            "label": "Weight",
-            "type": "DROPDOWN",
-            "defaultValue": "700",
-            "options": [
-              {"label": "Regular (400)", "value": "400"},
-              {"label": "Medium (500)", "value": "500"},
-              {"label": "Bold (700)", "value": "700"},
-              {"label": "Extra Bold (800)", "value": "800"}
-            ]
-          },
-          "textAlign": {
-            "label": "Alignment",
-            "type": "DROPDOWN",
-            "defaultValue": "center",
-            "options": [
-              {"label": "Left", "value": "left"},
-              {"label": "Center", "value": "center"},
-              {"label": "Right", "value": "right"}
-            ]
-          },
-          "letterSpacing": {
-            "label": "Letter spacing (px)",
-            "type": "NUMBER",
-            "defaultValue": 0,
-            "min": -2,
-            "max": 20,
-            "step": 0.5
-          },
-          "startColor": {
-            "label": "Start colour",
-            "type": "FILL_COLOR",
-            "defaultValue": "#ff7e5f"
-          },
-          "endColor": {
-            "label": "End colour",
-            "type": "FILL_COLOR",
-            "defaultValue": "#feb47b"
-          },
-          "angle": {
-            "label": "Gradient angle (deg)",
-            "type": "NUMBER",
-            "defaultValue": 90,
-            "min": 0,
-            "max": 360,
-            "step": 1
-          },
-          "lineHeight": {
-            "label": "Line height",
-            "type": "NUMBER",
-            "defaultValue": 1.1,
-            "min": 0.8,
-            "max": 2.0,
-            "step": 0.05
-          },
-          "padding": {
-            "label": "Padding (px)",
-            "type": "NUMBER",
-            "defaultValue": 8,
-            "min": 0,
-            "max": 64,
-            "step": 1
-          }
-        }
-      }
+      "name": "Test Vis",
+      "id": "test_vis",
+      "type": "VISUALIZATION"
     }
   ]
 }
