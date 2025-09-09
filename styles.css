@@ -1,0 +1,31 @@
+:root {
+  --pad: 8px;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: stretch;
+  padding: var(--pad);
+  box-sizing: border-box;
+}
+
+h1.gradient {
+  margin: 0;
+  line-height: 1.1;
+  /* Core gradient text trick */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Fallback for viewers lacking background-clip support */
+  -webkit-text-fill-color: transparent;
+  word-break: break-word;
+}
